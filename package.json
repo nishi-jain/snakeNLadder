@@ -1,0 +1,15 @@
+{
+  "name": "snakeNLadder",
+  "version": "1.0.0",
+  "description": "Snake and ladder online game.",
+  "keywords": [
+    "snakeNLadder",
+    "nodejs"
+  ],
+  "author": "Nishi Jain",
+  "homepage": "",
+  "dependencies": {
+    "express": "~4.15.4",
+    "socket.io": "^1.3.7"
+  }
+}

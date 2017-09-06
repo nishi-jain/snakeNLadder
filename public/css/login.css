@@ -1,0 +1,79 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../assets/login-background.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    position: relative;
+}
+
+h1{
+    font-family: fantasy;
+    color: orangered;
+    font-size: 72px;
+    margin-top: 0px;
+}
+
+h3{
+    font-family: fantasy;
+    color: black;
+    font-size: 45px; 
+    margin-bottom: 0px;
+}
+
+.container {
+    position: absolute;
+    top: 8%;
+    left: 25%;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+input{
+    left: 10%;
+    border: 0px;
+    border-radius: 10px;
+    width: 350px;
+    height: 52px;
+    box-shadow: 10px 10px 5px #888888;
+    font-size: 19px;
+    text-align: center;
+}
+
+input:focus{
+    outline: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.btTxt{ 
+    cursor: pointer;
+    border: none;
+    width: 92px;
+    height: 79px;
+    vertical-align: middle;
+    box-shadow: none;
+}
+
+.err{
+    display: inline-block;
+    color: red;
+}
+
+.hidden{
+    display: none;
+}

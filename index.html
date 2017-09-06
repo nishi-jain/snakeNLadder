@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snake and Ladder</title>
+    <link rel="icon" href="../assets/page-icon.jpeg" type="image/ico" />
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+   <div class="bg"></div>
+   <div class="container">
+        <h3>Let's play</h3>
+        <h1>Snakes and Ladders</h1>
+        <input type="text" placeholder="Who wants to challange Danny ?" id="player1-name"/>
+        <input type="image" src="../assets/heart-play.png" name="saveForm" class="btTxt submit" id="saveForm" />
+        <span id="errMsg" class="err hidden">Player name is mandatory!</span>
+   </div>
+    <script>
+        document.querySelector("#saveForm").addEventListener("click", function(e){
+            var isValid = false;
+            if(document.getElementById('player1-name').value.length){
+                window.location.href = '/game-board';
+            }else{
+                document.getElementById('errMsg').classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>

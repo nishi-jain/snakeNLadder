@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snake and Ladder</title>
+    <link rel="icon" href="/assets/page-icon.jpeg" type="image/ico" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- <img src="/foot-player1-icon.png" width="55" height="55"></img> -->
+    <h2>Start</h2>
+    <canvas id="myCanvas" width="950" height="800"></canvas>
+    <div class="dice-board">
+        <h1>Snakes<br> n <br>Ladders</h1>
+        <div id="player1"> 
+            <img src="assets/player1.png" alt="player_1" height="90" width="90">
+            <span class="player">Nishi</span>
+        </div>
+        <img id="arrow" class="towards-right" src="assets/arrow-logo.svg" height="100" width="195">
+        <div id="dice" onclick="javascript:stopstartDice()"></div>
+        <div id="player2">
+            <img class="player" src="assets/player2.png" alt="player_1" height="90" width="90">
+            <span class="player">Me</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts/game.js"></script>
+</body>
+
+</html>
