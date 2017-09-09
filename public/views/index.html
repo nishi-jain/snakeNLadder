@@ -20,7 +20,15 @@
     <script>
         document.querySelector("#saveForm").addEventListener("click", function(e){
             var isValid = false;
-            if(document.getElementById('player1-name').value.length){
+            var player1Name = document.getElementById('player1-name').value;
+            if(player1Name.length > 9){
+                var errElem = document.getElementById('errMsg');
+                errElem.innerHTML = "Max 9 characters allowed."
+                errElem.classList.remove('hidden');
+                return;
+            }
+            if(player1Name.length){
+                localStorage.setItem('player1Name', player1Name);
                 window.location.href = '/game-board';
             }else{
                 document.getElementById('errMsg').classList.remove('hidden');

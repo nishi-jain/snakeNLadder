@@ -10,19 +10,29 @@
 
 <body>
     <!-- <img src="/foot-player1-icon.png" width="55" height="55"></img> -->
-    <h2>Start</h2>
-    <canvas id="myCanvas" width="950" height="800"></canvas>
+    <h2 id="start">Start</h2>
+    <canvas id="myCanvas" width="980" height="800"></canvas>
     <div class="dice-board">
         <h1>Snakes<br> n <br>Ladders</h1>
         <div id="player1"> 
             <img src="assets/player1.png" alt="player_1" height="90" width="90">
-            <span class="player">Nishi</span>
+            <span class="player"></span>
+            <span class="sub"></span>
         </div>
         <img id="arrow" class="towards-right" src="assets/arrow-logo.svg" height="100" width="195">
-        <div id="dice" onclick="javascript:stopstartDice()"></div>
+        <button id="dice-roller" class="btn striped-shadow blue"><span>Roll Dice</span></button>
+        <div id="dice" class="hide"></div>
         <div id="player2">
             <img class="player" src="assets/player2.png" alt="player_1" height="90" width="90">
-            <span class="player">Me</span>
+            <span class="player">Danny</span>
+            <span class="sub"></span>
+        </div>
+    </div>
+    <div id="notice" class="overlay">
+        <div class="popup">
+            <a class="close" href="/">&times;</a>
+            <div id="content">
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="scripts/game.js"></script>
