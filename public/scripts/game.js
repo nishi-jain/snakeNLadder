@@ -44,14 +44,14 @@
         var img = new Image();
         img.onload = function () {
             ctx.drawImage(img, 87, 0, 893, 800);
-            var owMP3 = new Audio("../assets/background-sound.mp3");
+            var owMP3 = new Audio("public/assets/background-sound.mp3");
             owMP3.addEventListener('ended', function() {
                 this.currentTime = 0;
                 this.play();
             }, false);
             owMP3.play();
          }
-         img.src = "../assets/snakenladder.png";
+         img.src = "public/assets/snakenladder.png";
         ctx.drawImage(img, 10, 10);
     }
 
@@ -101,13 +101,15 @@
     function movePlayer(currPlayer, altPlayer){
         
         if(currPlayer.score < currPlayer.newScore){
-            var owMP3 = new Audio("../assets/key7.mp3");
+            var owMP3 = new Audio("public/assets/key7.mp3");
             owMP3.play();
             if (currPlayer.oldX != 87) {
                 ctx.putImageData(currPlayer.oldBack, currPlayer.oldX, currPlayer.oldY);
             }
+
             var img = new Image();
-            img.src = "assets/"+ game.currPlayer +".png";
+            //img.setAttribute('crossOrigin', '*');
+            img.src = "public/assets/"+ game.currPlayer +".png";
             img.onload = function(){
                 currPlayer.score += 1;
                 // check if positions coincides
@@ -183,7 +185,7 @@
         currPlayer.oldBack = altPlayer.oldBack;
 
         var img = new Image();
-        img.src = "assets/"+ imgName +".png";
+        img.src = "public/assets/"+ imgName +".png";
         img.onload = function(){
             altPlayer.oldBack = ctx.getImageData(25, 660, 80, 50);
             ctx.drawImage(img, 25, 660, 80, 50);
@@ -321,7 +323,7 @@
     }
 
     function checkSnake(currPlayer, altPlayer){
-        var owMP3 = new Audio("../assets/snakehiss2.mp3");
+        var owMP3 = new Audio("public/assets/snakehiss2.mp3");
         owMP3.play();
         // check for snake        
         currPlayer.newScore = game.dangerPoints[currPlayer.score];
@@ -331,7 +333,7 @@
 
     function checkLadder(currPlayer, altPlayer){
         var currPlayer = game[game.currPlayer];
-        var owMP3 = new Audio("../assets/happykids.mp3");
+        var owMP3 = new Audio("public/assets/happykids.mp3");
         owMP3.play();
         currPlayer.newScore = game.successPoints[currPlayer.score];
         currPlayer.score = currPlayer.newScore - 1;

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Snake and Ladder</title>
-    <link rel="icon" href="../assets/page-icon.jpeg" type="image/ico" />
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="public/assets/page-icon.jpeg" type="image/ico" />
+    <link rel="stylesheet" href="public/css/login.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <h3>Let's play</h3>
         <h1>Snakes and Ladders</h1>
         <input type="text" placeholder="Who wants to challange Danny ?" id="player1-name"/>
-        <input type="image" src="../assets/heart-play.png" name="saveForm" class="btTxt submit" id="saveForm" />
+        <input type="image" src="public/assets/heart-play.png" name="saveForm" class="btTxt submit" id="saveForm" />
         <span id="errMsg" class="err hidden">Player name is mandatory!</span>
    </div>
     <script>
@@ -29,7 +29,7 @@
             }
             if(player1Name.length){
                 localStorage.setItem('player1Name', player1Name);
-                window.location.href = '/game-board';
+                window.location.href = 'game-board.html';
             }else{
                 document.getElementById('errMsg').classList.remove('hidden');
             }
