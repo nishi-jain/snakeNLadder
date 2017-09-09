@@ -148,7 +148,7 @@
             div = '<h2>You lose. Better luck next time.</h2><div class="emoticon" align="center">☹ ☹ ☹</div>';
         }
         document.getElementById('content').innerHTML = div;
-        window.location.href = '/game-board#notice'
+        window.location.href = 'game-board.html#notice'
     }
 
     function changePlayer(){
